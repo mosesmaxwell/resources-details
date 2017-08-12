@@ -1,0 +1,10 @@
+  <a class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="">
+      <h4 class="list-group-item-heading">{{ resource.name }} <small><span class="badge badge-pill badge-info">{{ resource.status }}</span></small> </h4>
+    </div>
+    <div class="list-group-item-text btn-group-sm">
+      <button class="btn btn-success" (click)="onAssign('billable')">Billable</button>
+      <button class="btn btn-danger" (click)="onAssign('bench')">Bench</button>
+      <button class="btn btn-warning" (click)="onAssign('blocked')">Blocked</button>
+    </div>
+  </a>
