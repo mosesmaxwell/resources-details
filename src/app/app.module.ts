@@ -23,6 +23,9 @@ const routes = [
   },
   {
     path: 'add-resource', component: AddResourceComponent
+  },
+  {
+    path: '**', redirectTo: '/'
   }
 ];
 
