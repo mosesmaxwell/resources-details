@@ -38,7 +38,7 @@ export class ResourceDataService {
    }
 
   getResourceDetails(chosenList) {
-    if(chosenList === 'all') {
+    if (chosenList === 'all') {
       return this.candidates.slice();
     }
     return this.candidates.filter((resource) => {
@@ -54,4 +54,15 @@ export class ResourceDataService {
     this.logService.writeLog('the selected status is '+ candidateInfo);
   }
 
+  addNewResource(empId, name, status) {
+    const pos = this.candidates.findIndex((resource) => {
+      return resource.empId == empId || resource.name === name;
+    });
+    if (pos !== -1) {
+      return 'Resource already exists!';
+    }
+    const newResource = { empId: empId, name: name, status: status };
+    this.candidates.push(newResource);
+    return 'Resource Added!';
+  }
 }

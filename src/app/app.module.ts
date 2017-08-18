@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 import { ResourceDataService } from './services/resource-data.service';
 import { LogService } from './services/log.service';
@@ -13,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
+import { AddResourceComponent } from './add-resource/add-resource.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,11 @@ import { ItemComponent } from './item/item.component';
     DashboardComponent,
     TabsComponent,
     ListComponent,
-    ItemComponent
+    ItemComponent,
+    AddResourceComponent
   ],
   imports: [
-    BrowserModule, NgbModule.forRoot()
+    BrowserModule, NgbModule.forRoot(), FormsModule
   ],
   providers: [ResourceDataService, LogService],
   bootstrap: [AppComponent]
