@@ -58,11 +58,11 @@ export class ResourceDataService {
 
   setResourceStatus(candidateInfo) {
     const pos = this.candidates.findIndex((resource) => {
-      return resource.empId === candidateInfo.empId;
+      return resource.name === candidateInfo.name;
     });
     this.candidates[pos].status = candidateInfo.status;
     this.resourceChanged.next();
-    this.logService.writeLog('the selected status is '+ candidateInfo);
+    this.logService.writeLog('the selected status is ' + candidateInfo.name);
   }
 
   addNewResource(empId, name, status) {

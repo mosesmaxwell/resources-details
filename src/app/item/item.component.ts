@@ -10,7 +10,7 @@ export class ItemComponent implements OnInit {
   @Input() resource;
   rdService: ResourceDataService;
 
-  constructor(rdService: ResourceDataService) { 
+  constructor(rdService: ResourceDataService) {
     this.rdService = rdService;
   }
 
@@ -18,7 +18,7 @@ export class ItemComponent implements OnInit {
   }
 
   onAssign(status) {
-    this.rdService.setResourceStatus({ empId: this.resource.empId, status: status });
+    this.rdService.setResourceStatus({ name: this.resource.name, status: status });
   }
 
 }
