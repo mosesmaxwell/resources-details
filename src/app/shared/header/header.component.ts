@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title = "WebUI";
-  location = "chennai";
+  title = 'Team WebUI';
+  location = 'Chennai';
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit() {
