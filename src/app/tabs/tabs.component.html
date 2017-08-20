@@ -1,9 +1,9 @@
 <h4><span class="badge badge-secondary">Resource Status</span></h4>
 <ul class="nav nav-tabs">
-  <li class="nav-item"><a (click)="setChoose('all')" class="nav-link" [ngClass]="{'active': chosenList === 'all'}">All <span class="badge badge-secondary">{{ getResourcesCount('all') }}</span></a></li>
-  <li class="nav-item"><a (click)="setChoose('billable')" class="nav-link" [ngClass]="{'active': chosenList === 'billable'}">Billable <span class="badge badge-secondary">{{ getResourcesCount('billable') }}</span></a></li>
-  <li class="nav-item"><a (click)="setChoose('bench')" class="nav-link" [ngClass]="{'active': chosenList === 'bench'}">Bench <span class="badge badge-secondary">{{ getResourcesCount('bench') }}</span></a></li>
-  <li class="nav-item"><a (click)="setChoose('blocked')" class="nav-link" [ngClass]="{'active': chosenList === 'blocked'}">Blocked <span class="badge badge-secondary">{{ getResourcesCount('blocked') }}</span></a></li>
+  <li class="nav-item"><a routerLink="/resources/all" routerLinkActive="active" class="nav-link">All <span class="badge badge-secondary">{{ getResourcesCount('all') }}</span></a></li>
+  <li class="nav-item"><a routerLink="/resources//billable" routerLinkActive="active" class="nav-link">Billable <span class="badge badge-secondary">{{ getResourcesCount('billable') }}</span></a></li>
+  <li class="nav-item"><a routerLink="/resources//bench" routerLinkActive="active" class="nav-link">Bench <span class="badge badge-secondary">{{ getResourcesCount('bench') }}</span></a></li>
+  <li class="nav-item"><a routerLink="/resources//blocked" routerLinkActive="active" class="nav-link">Blocked <span class="badge badge-secondary">{{ getResourcesCount('blocked') }}</span></a></li>
 </ul>
 
-<app-list [resources]="getResources()"></app-list>
+<router-outlet></router-outlet>

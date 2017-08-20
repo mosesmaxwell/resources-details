@@ -7,8 +7,7 @@ import { ResourceDataService } from '../services/resource-data.service';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-  resources = [];
-  chosenList = 'all';
+
   rdService: ResourceDataService;
 
   constructor(rdService: ResourceDataService) {
@@ -16,15 +15,6 @@ export class TabsComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  setChoose(status) {
-    this.chosenList = status;
-  }
-
-  getResources() {
-    this.resources = this.rdService.getResourceDetails(this.chosenList);
-    return this.resources;
   }
 
   getResourcesCount(status) {

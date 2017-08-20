@@ -3,17 +3,20 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { TabsComponent } from './tabs/tabs.component';
-import { AddResourceComponent } from './add-resource/add-resource.component';
+import { ListComponent } from './list/list.component';
 
 const routes = [
   {
-    path: '', component: TabsComponent
+    path: 'resources', component: TabsComponent, children: [
+      { path: '', redirectTo: 'all', pathMatch: 'full' },
+      { path: ':status', component: ListComponent }
+    ]
   },
   {
-    path: 'add-resource', component: AddResourceComponent
+    path: 'add-resource', loadChildren: './add-resource/add-resource.module.ts#AddResourceModule'
   },
   {
-    path: '**', redirectTo: '/'
+    path: '**', redirectTo: '/resources/'
   }
 ];
 
