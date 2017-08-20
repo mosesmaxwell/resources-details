@@ -7,22 +7,6 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ResourceDataService {
   private candidates = [
-    { empId: '109095', name: "Mahesh Kumar Murugan", status: '' },
-    { empId: '126628', name: "Thanujha Malligeswaran", status: '' },
-    { empId: '111613', name: "Basker Sundaramoorthy", status: '' },
-    { empId: '111925', name: "Cheran Rajangam", status: '' },
-    { empId: '126681', name: "Venkatesh Sha Sulugar Dhondu", status: '' },
-    { empId: '120470', name: "Kishor Rajan Nagalingam Karuppiah", status: '' },
-    { empId: '115288', name: "Eniya Umamaheshwari Kalaiarasan", status: '' },
-    { empId: '126634', name: "Arvind Ravichandran", status: '' },
-    { empId: '115352', name: "Vandana Nemaraj", status: '' },
-    { empId: '115531', name: "Need Smith Arockia", status: '' },
-    { empId: '115605', name: "Madhavan Masilamani", status: '' },
-    { empId: '115661', name: "Arunachalam Muthaiah", status: '' },
-    { empId: '116166', name: "Raja Thatchana Moorthy", status: '' },
-    { empId: '116779', name: "Kannapiran R", status: '' },
-    { empId: '116805', name: "Dhinesh Balasubramaniyan", status: '' },
-    { empId: '103056', name: "Sundharesan Ramamurthy", status: '' },
     { empId: '117671', name: "Moses Maxwell Ephraiam Durai Raj", status: '' },
     { empId: '125177', name: "Saravanan P", status: '' },
     { empId: '105792', name: "Sundar N", status: '' },
