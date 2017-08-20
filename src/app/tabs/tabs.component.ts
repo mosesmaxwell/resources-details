@@ -11,7 +11,7 @@ export class TabsComponent implements OnInit {
   chosenList = 'all';
   rdService: ResourceDataService;
 
-  constructor(rdService: ResourceDataService) { 
+  constructor(rdService: ResourceDataService) {
     this.rdService = rdService;
   }
 

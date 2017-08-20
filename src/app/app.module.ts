@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpModule } from '@angular/http';
 
 import { ResourceDataService } from './services/resource-data.service';
 import { LogService } from './services/log.service';
@@ -30,7 +31,7 @@ import { AddResourceComponent } from './add-resource/add-resource.component';
     AddResourceComponent
   ],
   imports: [
-    BrowserModule, NgbModule.forRoot(), FormsModule, AppRoutingModule
+    BrowserModule, NgbModule.forRoot(), FormsModule, AppRoutingModule, HttpModule
   ],
   providers: [ResourceDataService, LogService],
   bootstrap: [AppComponent]
