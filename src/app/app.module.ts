@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 import { ResourceDataService } from './services/resource-data.service';
 import { LogService } from './services/log.service';
@@ -17,18 +17,6 @@ import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 import { AddResourceComponent } from './add-resource/add-resource.component';
 
-const routes = [
-  {
-    path: '', component: DashboardComponent
-  },
-  {
-    path: 'add-resource', component: AddResourceComponent
-  },
-  {
-    path: '**', redirectTo: '/'
-  }
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +30,7 @@ const routes = [
     AddResourceComponent
   ],
   imports: [
-    BrowserModule, NgbModule.forRoot(), FormsModule, RouterModule.forRoot(routes)
+    BrowserModule, NgbModule.forRoot(), FormsModule, AppRoutingModule
   ],
   providers: [ResourceDataService, LogService],
   bootstrap: [AppComponent]

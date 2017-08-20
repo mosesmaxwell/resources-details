@@ -1,23 +1,28 @@
 <h4><span class="badge badge-secondary">Add New Resource</span></h4>
 <p class="text-info"> {{message}} </p>
-<form (ngSubmit)="onSubmit(form)" #form="ngForm">
-  <div class="form-group">
-    <label for="id">Employee ID</label>
-    <input type="text" class="form-control" id="id" name="id" ngModel required minlength="5" maxlength="6" pattern="[0-9]*" #idCtrl="ngModel">
-    <span class="form-text text-muted" *ngIf="idCtrl.invalid && idCtrl.touched">Please enter valid employee id</span>
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="form-group">
+          <label for="id">Employee ID</label>
+          <input type="text" class="form-control" id="id" name="id" ngModel required minlength="5" maxlength="6" pattern="[0-9]*" #idCtrl="ngModel">
+          <span class="form-text text-muted" *ngIf="idCtrl.invalid && idCtrl.touched">Please enter valid employee id</span>
+        </div>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" class="form-control" id="name" name="name" ngModel required #nameCtrl="ngModel">
+          <span class="form-text text-muted" *ngIf="nameCtrl.invalid && nameCtrl.touched">Please enter employee name</span>
+        </div>
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select name="status" id="status" class="form-control" ngModel>
+            <option *ngFor="let status of srcStatus" [value]="status.value">
+              {{status.display}}
+            </option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Add Resource</button>
+      </form>
   </div>
-  <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" class="form-control" id="name" name="name" ngModel required #nameCtrl="ngModel">
-    <span class="form-text text-muted" *ngIf="nameCtrl.invalid && nameCtrl.touched">Please enter employee name</span>
-  </div>
-  <div class="form-group">
-    <label for="status">Status</label>
-    <select name="status" id="status" class="form-control" ngModel>
-      <option *ngFor="let status of srcStatus" [value]="status.value">
-        {{status.display}}
-      </option>
-    </select>
-  </div>
-  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Add Resource</button>
-</form>
+</div>
+
