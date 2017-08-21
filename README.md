@@ -3,16 +3,16 @@ Angular 4 app for manage resource allocation status
 
 ### The following angular 4 essential concepts has been implemented
 
-Templating and Data Binding
-Forms
-Bootstraping
-Module
-Components
-Routing, Child Routing
-Feature Module
-Dependency Injection
-RxJS observable and subscribe
-HTTP
+1. Templating and Data Binding
+2. Forms
+3. Bootstraping
+4. Module
+5. Components
+6. Routing, Child Routing
+7. Feature Module
+8. Dependency Injection
+9. RxJS observable and subscribe
+10. HTTP
 
 ### Steps
 
