@@ -1,9 +1,11 @@
+
+import {map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 import { LogService } from './log.service';
-import 'rxjs/add/operator/map';
+
 
 @Injectable()
 export class ResourceDataService {
@@ -30,15 +32,15 @@ export class ResourceDataService {
    }
 
   fetchResources() {
-    this.http.get('https://swapi.co/api/people/')
-      .map((response: Response) => {
+    this.http.get('https://swapi.co/api/people/').pipe(
+      map((response: Response) => {
         const data = response.json();
         const extResources = data.results;
         const resources = extResources.map((resource) => {
           return { empId: resource.birth_year, name: resource.name, status: ''};
         });
         return resources;
-      })
+      }))
       .subscribe(
         (data) => {
           this.candidates = data;

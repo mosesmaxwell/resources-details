@@ -1,7 +1,7 @@
 ### resources-details
-Angular 4 app for manage resource allocation status
+Angular 2+ app for manage resource allocation status
 
-### The following angular 4 essential concepts has been implemented
+### The following angular 7 essential concepts has been implemented
 
 1. Templating and Data Binding
 2. Forms
